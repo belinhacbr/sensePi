@@ -1,0 +1,41 @@
+.controls
+{
+  top: 0;
+  right: 20px;
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  color: white; 
+  font: 12pt Roboto;
+}
+
+
+#canvas
+{	
+	background-color: black;
+}
+
+body
+{
+ margin: 0px;
+}
+
+a
+{
+	color: rgba(204,95,211,1);
+}
+
+a:hover{
+	color: rgba(0,128,254,1);
+	text-decoration: none;
+}
+
+
+.tooltip > .tooltip-inner {
+    background-color: white; 
+    color: black; 
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+    font: 12pt Roboto;
+}
