@@ -52,10 +52,10 @@
 	function drawText(ctx) {
 	    ctx.fillStyle = 'white';
 	    ctx.font = "12pt Roboto";
-	    var xt, yt;
+	    var xt, yt, segmentMed;
     	textCircleRad = yc - (canvas.height/25)
     	for(var i=0; i<10; i++){
-    		var segmentMed = (startAngles[i] + endAngles[i])/2;
+    		segmentMed = (startAngles[i] + endAngles[i])/2;
     		xt = xParametricCoord(xc-10, textCircleRad, segmentMed);
     		yt = yParametricCoord(yc+7, textCircleRad, segmentMed);
     		ctx.fillText("//"+i, xt, yt);
@@ -117,15 +117,16 @@
 		var canvas = document.getElementById("canvas");
 		if (canvas.getContext){
 			var ctx = canvas.getContext('2d');
+			var x0, y0, x1, y1, fromValueNextAngle, toValueNextAngle;
 			if(piIndex <= steps){
 				ctx.save();
 				toValue = pi[piIndex];
 
-				var fromValueNextAngle = getNextSequencialAngle(fromValue), toValueNextAngle = getNextSequencialAngle(toValue);
-				var x0=xParametricCoord(xc, innerCircleRad, fromValueNextAngle), 
-					y0=yParametricCoord(yc, innerCircleRad, fromValueNextAngle), 
-					x1=xParametricCoord(xc, innerCircleRad, toValueNextAngle), 
-					y1=yParametricCoord(yc, innerCircleRad, toValueNextAngle);
+				fromValueNextAngle = getNextSequencialAngle(fromValue), toValueNextAngle = getNextSequencialAngle(toValue);
+				x0=xParametricCoord(xc, innerCircleRad, fromValueNextAngle);
+				y0=yParametricCoord(yc, innerCircleRad, fromValueNextAngle); 
+				x1=xParametricCoord(xc, innerCircleRad, toValueNextAngle); 
+				y1=yParametricCoord(yc, innerCircleRad, toValueNextAngle);
 
 				console.log("pi");
 
