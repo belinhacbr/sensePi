@@ -5,6 +5,19 @@
   text-align: right;
   position: absolute;
   width: 100%;
+  height: 5%;
+  color: white; 
+  font: 12pt Roboto;
+}
+
+.bottom-controls
+{
+  bottom: 0;
+  right: 20px;
+  text-align: right;
+  position: absolute;
+  width: 100%;
+  height: 5%;
   color: white; 
   font: 12pt Roboto;
 }
@@ -38,4 +51,11 @@ a:hover{
     padding: 10px;
     text-align: left;
     font: 12pt Roboto;
+}
+
+.glyphicon-github{
+  background-image: url('./github.png');
+  background-repeat: no-repeat;
+  padding-left: 40px;  /* width of the image plus a little extra padding */
+  padding-bottom: 40px;
 }
