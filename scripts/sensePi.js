@@ -1,8 +1,3 @@
-
-	$(document).ready(function(){
-    	$('[data-toggle="tooltip"]').tooltip({title: "By <a href='https://github.com/belinhacbribeiro' target='_blank'>@belinhacbr</a> based on the work of <a href='http://mkweb.bcgsc.ca/pi/art/' target='_blank'>Cristian Ilies Vasile and Martin Krzywinski.</a>", html: true, delay: {hide: 2000}});
-	});
-
 	var strokeColor = [ 'rgba(89,48,27,1)','rgba(223,134,74,1)', 
 						'rgba(76,31,115,1)','rgba(204,95,211,1)', 
 						'rgba(4,100,102,1)','rgba(26,228,225,1)', 
@@ -22,14 +17,22 @@
     		canvas.height = window.innerHeight;
     		xc = (canvas.width/2);
     		yc = (canvas.height/2);
-    		innerCircleRad = yc-(canvas.height/10);
-    		outerCircleRad = yc - (canvas.height/15);
+    		innerCircleRad = getRad(10);
+			outerCircleRad = getRad(15);
 
     		drawOuterCircle(ctx, xc, yc, outerCircleRad);
     		drawText(ctx);
     		fromValue = pi[0];
     		piIndex = 1;
 			setInterval(drawLines,100);					
+		}
+	}
+
+	function getRad(r){
+		if(canvas.height < canvas.width){
+			return (yc - (canvas.height/r)) ;
+		}else{
+			return (xc - (canvas.width/r)) ;
 		}
 	}
 
@@ -53,7 +56,7 @@
 	    ctx.fillStyle = 'white';
 	    ctx.font = "12pt Roboto";
 	    var xt, yt, segmentMed;
-    	textCircleRad = yc - (canvas.height/25)
+    	textCircleRad = getRad(25);
     	for(var i=0; i<10; i++){
     		segmentMed = (startAngles[i] + endAngles[i])/2;
     		xt = xParametricCoord(xc-10, textCircleRad, segmentMed);

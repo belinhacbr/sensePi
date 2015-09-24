@@ -7,6 +7,11 @@
 		<link rel="stylesheet" type="text/css" href="CSS/sensePi.css">
 		<script type="text/javascript" src="scripts/pi.js"></script>
 		<script type="text/javascript" src="scripts/sensePi.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('[data-toggle="tooltip"]').tooltip({title: "By <a href='https://github.com/belinhacbribeiro' target='_blank'>@belinhacbr</a> based on the work of <a href='http://mkweb.bcgsc.ca/pi/art/' target='_blank'>Cristian Ilies Vasile and Martin Krzywinski.</a>", html: true, delay: {hide: 2000}});
+			});
+		</script>
 		<title>sensePi</title>
 	</head>
 	<body onload="draw();">
