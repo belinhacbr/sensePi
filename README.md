@@ -4,4 +4,4 @@ A visual representation of the first 1000 digits of the mathematical constant Pi
 ![exampleImg](/img/sensePi.png?raw=true "sensePi")
 
 
-See it in action <a href='http://belinhacbribeiro.github.io/sensePi/'>here</a>.
+See it in action <a href='http://belinhacbr.github.io/sensePi/'>here</a>.
