@@ -102,7 +102,7 @@
 			}
 		}
 
-		function getNextSequencialAngle(value){
+		function getNextSequentialAngle(value){
 			var nextAngle = nextAngles[value];
 			var spacingRatio = 0.005;
 			if((nextAngles[value] + spacingRatio) < endAngles[value]){
@@ -125,7 +125,7 @@
 					ctx.save();
 					toValue = pi[piIndex];
 
-					fromValueNextAngle = getNextSequencialAngle(fromValue), toValueNextAngle = getNextSequencialAngle(toValue);
+					fromValueNextAngle = getNextSequentialAngle(fromValue), toValueNextAngle = getNextSequentialAngle(toValue);
 					x0=xParametricCoord(xc, innerCircleRad, fromValueNextAngle);
 					y0=yParametricCoord(yc, innerCircleRad, fromValueNextAngle); 
 					x1=xParametricCoord(xc, innerCircleRad, toValueNextAngle); 
